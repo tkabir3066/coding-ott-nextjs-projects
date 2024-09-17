@@ -70,7 +70,7 @@ function Layout({ children }) {
         </button>
       </nav>
 
-      <div className="py-16 px-24">{children}</div>
+      <div className="py-16 lg:px-24 px-8">{children}</div>
 
       <footer className="bg-slate-950 p-8  text-white grid lg:grid-cols-4 lg:px-24 lg:py-16 lg:gap-0 gap-8">
         <div>
@@ -96,7 +96,7 @@ function Layout({ children }) {
           <h1 className="text-white text-xl font-semibold">Social Links</h1>
           <div className="text-gray-400 mt-3 flex flex-col gap-3">
             {socialLinks.map((item, index) => (
-              <Link href={item.link}>
+              <Link href={item.link} key={index}>
                 <i className={`${item.icon} text-2xl mr-2`}></i>
                 {item.label}
               </Link>
